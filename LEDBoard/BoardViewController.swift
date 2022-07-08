@@ -74,13 +74,13 @@ class BoardViewController: UIViewController {
     }
     
     @IBAction func tapGestureClicked(_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
-        
+
         if userTextField.isEditing {
             textView.isHidden = false
         } else {
             textView.isHidden.toggle()
         }
+        view.endEditing(true)
     }
 
     @IBAction func textFieldEdited(_ sender: UITextField) {
