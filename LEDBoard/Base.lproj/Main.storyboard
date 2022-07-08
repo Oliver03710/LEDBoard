@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Board View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BoardViewController" customModule="LEDBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ab-ly-PZK">
+                                <rect key="frame" x="76" y="186.5" width="744" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-ym-xIB">
+                                <rect key="frame" x="74" y="20" width="748" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOf-y2-LNn">
+                                        <rect key="frame" x="644" y="8" width="88" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="pGd-fe-xp5"/>
+                                            <constraint firstAttribute="height" constant="44" id="s37-yF-jDA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="텍스트변경"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ip-if-U92">
+                                        <rect key="frame" x="566.5" y="8" width="61.5" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="전송"/>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uny-9O-paA"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMk-r1-XdQ">
+                                        <rect key="frame" x="16" y="8" width="534.5" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEdited:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="ZSN-rf-oSV"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="bMk-r1-XdQ" firstAttribute="leading" secondItem="pAU-ym-xIB" secondAttribute="leading" constant="16" id="8vL-y1-wEB"/>
+                                    <constraint firstItem="7ip-if-U92" firstAttribute="width" secondItem="EOf-y2-LNn" secondAttribute="width" multiplier="0.7" id="A9n-S6-vUS"/>
+                                    <constraint firstItem="7ip-if-U92" firstAttribute="height" secondItem="EOf-y2-LNn" secondAttribute="height" id="D9C-kH-2jE"/>
+                                    <constraint firstAttribute="trailing" secondItem="EOf-y2-LNn" secondAttribute="trailing" constant="16" id="OJh-Hk-ytW"/>
+                                    <constraint firstAttribute="height" constant="60" id="cvc-ra-Fvk"/>
+                                    <constraint firstAttribute="bottom" secondItem="bMk-r1-XdQ" secondAttribute="bottom" constant="8" id="hSW-nh-OXF"/>
+                                    <constraint firstItem="7ip-if-U92" firstAttribute="leading" secondItem="bMk-r1-XdQ" secondAttribute="trailing" constant="16" id="mbh-0o-JLv"/>
+                                    <constraint firstItem="EOf-y2-LNn" firstAttribute="centerY" secondItem="pAU-ym-xIB" secondAttribute="centerY" id="uxR-Mf-x3o"/>
+                                    <constraint firstItem="bMk-r1-XdQ" firstAttribute="top" secondItem="pAU-ym-xIB" secondAttribute="top" constant="8" id="vBF-FL-rjs"/>
+                                    <constraint firstItem="EOf-y2-LNn" firstAttribute="leading" secondItem="7ip-if-U92" secondAttribute="trailing" constant="16" id="wH3-ug-imh"/>
+                                    <constraint firstItem="7ip-if-U92" firstAttribute="centerY" secondItem="EOf-y2-LNn" secondAttribute="centerY" id="zcX-BD-ZJK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pAU-ym-xIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5jn-UG-8eB"/>
+                            <constraint firstItem="1ab-ly-PZK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E5V-09-OWE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pAU-ym-xIB" secondAttribute="trailing" constant="30" id="LDn-tH-zpT"/>
+                            <constraint firstItem="1ab-ly-PZK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NmG-LX-XWJ"/>
+                            <constraint firstItem="pAU-ym-xIB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bRj-99-bSQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1ab-ly-PZK" secondAttribute="trailing" constant="30" id="kvt-TO-BGh"/>
+                            <constraint firstItem="1ab-ly-PZK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zLB-0h-Q2c"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="C8g-cV-kix" appends="YES" id="TY6-Og-GQL"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="1ab-ly-PZK" id="ySu-M3-OdP"/>
+                        <outlet property="sendButton" destination="7ip-if-U92" id="mEU-fc-B4a"/>
+                        <outlet property="textColorButton" destination="EOf-y2-LNn" id="ZgW-sp-sJN"/>
+                        <outlet property="textView" destination="pAU-ym-xIB" id="tT1-cx-RfX"/>
+                        <outlet property="userTextField" destination="bMk-r1-XdQ" id="ewP-cR-Pb4"/>
+                        <outletCollection property="buttonList" destination="7ip-if-U92" collectionClass="NSMutableArray" id="NEY-vc-Ha1"/>
+                        <outletCollection property="buttonList" destination="EOf-y2-LNn" collectionClass="NSMutableArray" id="bBM-Xm-Vnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="C8g-cV-kix">
+                    <connections>
+                        <action selector="tapGestureClicked:" destination="BYZ-38-t0r" id="ga3-tq-7Ep"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1069" y="-106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.3580000102519989" green="0.75499999523162842" blue="0.86100000143051147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
